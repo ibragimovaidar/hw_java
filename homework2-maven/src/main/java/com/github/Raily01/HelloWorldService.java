@@ -6,13 +6,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class HelloWorldService {
 
-    private final String name;
+    private final String text;
 
-    public HelloWorldService(@Value("${name:World}") String name) {
-        this.name = name;
+    public HelloWorldService(@Value("${text}") String text) {
+        this.text = text;
     }
 
     public String getHelloMessage() {
-        return String.format("Hello %s!", name);
+        return text;
     }
 }

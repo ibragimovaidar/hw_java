@@ -38,7 +38,7 @@ class Homework2ApplicationTests {
     void serviceTest() {
         assertThat(helloWorldService.getHelloMessage())
                 .as("Сервис должен вернуть ожидаемую строку")
-                .isEqualTo(String.format("Hello %s!", environment.getProperty("name")));
+                .isEqualTo(environment.getProperty("text"));
     }
 
 }
